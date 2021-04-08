@@ -1,0 +1,255 @@
+// Copyright 1996, 1997, CERN, Switzerland. All rights reserved.
+
+/**
+ * Example configuration for Wired
+ *
+ * @author M.Donszelmann (duns@www.cern.ch)
+ * @version 0.1
+ */
+
+MultipleView = Panel() {
+    border(2,2)
+    North = Panel() {
+        row()
+//        WiredLogo()
+        WiredEventSelector()
+        WiredEventInfo()
+        WiredCommunicationStatus(2)
+    }
+    Center  = Panel() {
+        border(2,2)
+        Center  = CardPanel() {
+            "1 View" = WiredView("DELPHI")
+            "2 Views" = Panel() {
+                grid(0,1)
+                WiredView("DELPHI 1")
+                WiredView("DELPHI 2")
+            }
+            "4 Views" = Panel() {
+                grid(2,2)
+                WiredView("1")
+                WiredView("2")
+                WiredView("3")
+                WiredView("4")
+            }
+            "Mixed" = Panel() {
+                relative(0, 0, 0, "75:25")
+                WiredView("Main")
+                Panel() {
+                    relative(1, 0, 0, "25:25:25:25")
+                    WiredView("View 1")
+                    WiredView("View 2")
+                    WiredView("View 3")
+                    WiredView("View 4")
+                }
+            }
+        }
+        East    = CardPanel() {
+            DELPHI =  Panel() {
+                col()
+                WiredEventStatus()
+                WiredDetectorList("BARREL","DELPHI Barrel")
+                WiredDetectorList("FORWARD", "DELPHI Forward")
+            }
+//            BaBar =  Panel() {
+//                col()
+//                WiredDetectorList("DC0:duns,DR0:x x,EM0,VD0,MB0", "BaBar Barrel")
+//                WiredDetectorList("DE0,DS0,MG0,SA0", "BaBar Forward")
+//            }
+            Action = Panel() {
+                col()
+                WiredMouse()
+                WiredViewReset()
+    //            WiredViewType()
+            }
+
+        }
+    }
+}
+
+
+
+/*
+View3View1 = Panel() {
+    border(2,2)
+    Center  = Panel() {
+        border(2,2)
+        North   = Panel() {
+            row()
+            WiredLogo()
+            WiredEventSelector()
+            WiredEventInfo()
+        }
+        Center  = Panel() {
+            grid(2,2)
+            Panel() {
+                border(2,2)
+                North = WiredEventSelector()
+                Center = WiredView()
+                East = WiredMouse()
+            }
+            WiredView()
+            WiredView()
+            WiredView()
+        }
+    }
+    East    = Panel() {
+        col()
+        WiredCommunicationStatus(2)
+        Panel() {
+            row()
+            WiredMouse()
+//            WiredViewType()
+            WiredViewReset()
+        }
+        WiredEventStatus()
+        Panel() {
+            row()
+            WiredDetectorList("BARREL")
+            WiredDetectorList("FORWARD")
+        }
+    }
+}
+*/
+
+/*
+View4 = Panel() {
+    border(2,2)
+    Center  = Panel() {
+        border(2,2)
+        North   = Panel() {
+            row()
+            WiredLogo()
+            WiredEventSelector()
+            WiredEventInfo()
+        }
+        Center  = Panel() {
+            grid(2,2)
+            WiredView()
+            WiredView()
+            WiredView()
+            WiredView()
+        }
+    }
+    East    = Panel() {
+        col()
+        WiredCommunicationStatus(2)
+        Panel() {
+            row()
+            WiredMouse()
+//            WiredViewType()
+            WiredViewReset()
+        }
+        WiredEventStatus()
+        Panel() {
+            row()
+            WiredDetectorList("BARREL")
+            WiredDetectorList("FORWARD")
+        }
+    }
+}
+
+*/
+/*
+ViewAndView5 = Panel() {
+    border(2,2)
+    Center  = Panel() {
+        border(2,2)
+        North   = Panel() {
+            row()
+            WiredLogo()
+            WiredEventSelector()
+            WiredEventInfo()
+        }
+        Center  = Panel() {
+            border(1,1)
+            Center  = Panel() {
+                grid(1,1)
+                WiredView()
+            }
+            East    = Panel() {
+                grid(3,1)
+                WiredView()
+                WiredView()
+                WiredView()
+            }
+        }
+    }
+    East    = Panel() {
+        col()
+        WiredCommunicationStatus(2)
+        Panel() {
+            row()
+            WiredMouse()
+//            WiredViewType()
+            WiredViewReset()
+        }
+        WiredEventStatus()
+        Panel() {
+            row()
+            WiredDetectorList("BARREL")
+            WiredDetectorList("FORWARD")
+        }
+    }
+}
+
+*/
+
+Applet = MultipleView
+
+
+
+/*
+DetectorWindow = Panel() {
+    border(2,2)
+    North   = Panel() {
+        gridbag()
+        WiredEventSelector()
+        WiredEventInfo()
+    }
+    East    = Panel() {
+        gridbag()
+        WiredDetectorList("BARREL")
+        WiredDetectorList("FORWARD")
+    }
+    Center  = WiredView()
+    South   = Panel() {
+        gridbag()
+        WiredViewStatus()
+        WiredEventStatus()
+        WiredControl()
+        WiredCommunicationStatus()
+    }
+}
+
+RightPanel = Panel() {
+        flow(2)
+        WiredButton("X")
+        WiredButton("Y")
+        WiredButton("Z")
+    }
+
+
+OurWindow = Panel () {
+    border(30,30)
+    North  = WiredEventSelector()
+    East   = WiredButton("East")
+    West   = WiredButton("Duns")
+    South  = WiredButton("South")
+    Center = Panel() {
+        grid(3,4)
+        WiredButton("1")
+        WiredButton("2")
+        WiredButton("3")
+        WiredButton("4")
+        WiredButton("5")
+        WiredButton("6")
+        WiredButton("7")
+        WiredButton("8")
+        WiredButton("9")
+        WiredButton("10")
+        WiredButton("11")
+        WiredButton("12")
+    }
+}*/
+

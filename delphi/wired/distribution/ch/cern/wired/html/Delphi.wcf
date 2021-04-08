@@ -1,0 +1,22 @@
+MultipleView = Panel() {
+   border(1,2)
+   East = Panel() {
+      col()
+      WiredEventSelector()
+      WiredMouse()
+      WiredViewReset()
+      WiredDetectorList(2, "DELPHI", "VtxDet,TrDet,EMCal,HaCal,MuDet", "DELPHI Barrel")
+      WiredDetectorList(2, "DELPHI", "EMCal.,HaCal.,MuDet.", "DELPHI Forward")
+   }
+   Center = Panel() {
+      border(2,1)
+      North = Panel () {
+         grid(1,1)
+         WiredEventInfo()
+      }
+      Center = Panel () {
+         grid(1,1)
+         WiredView("DELPHI")
+      }
+   }
+}

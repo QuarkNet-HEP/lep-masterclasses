@@ -1,0 +1,29 @@
+#
+# Event selection file
+#
+# one event per listed file !!!
+#
+# filename     # comment on the file
+run009-2405-23 special event W
+run009-2405-24 special event Z
+run009-2405-25 special event W+
+run009-2405-26 special event BhaBha
+run009-2405-27 special event 3 prong
+run009-2405-28 special event 4 prong
+run009-2405-29 special event W
+run009-2405-30 special event Z
+run009-8709-23 special event mumu
+run009-8709-24 special event ..
+run009-8709-25 special event ...
+run009-8709-26 special event
+run009-8709-27 special event
+run009-8709-28 special event
+run009-8709-29 special event
+run009-8709-30 special event
+run009-9904-23 special event
+run009-9904-24 special event
+run009-9904-25 special event
+run009-9904-26 special event
+run009-9904-27 special event
+run009-9904-28 special event
+run009-9904-29 special event
